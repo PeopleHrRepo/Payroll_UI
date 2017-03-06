@@ -1,0 +1,153 @@
+<html>
+
+<head>
+
+
+</head> 
+
+
+           <div class="tab-pane" id="profile-v">
+
+                           
+                                 <h2>Select Earning Codes </h2>
+                           
+                       <div class="row">
+                          
+                                  <div class="col-xs-6">
+                                       
+                                        <span id="head">Available Earning Codes</span>
+
+                                         <div class="inner-addon right-addon">
+                                           <i class="glyphicon glyphicon-search"></i>
+                              <input   type="text" class="form-control" placeholder="Find Code"  [(ngModel)]="search"    />
+                                        </div>
+
+                                        <div class="section1">
+                                           <div class="panel-group" id="accordion">
+                                             <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="text-decoration:none;color:grey">
+                                                    Your Earning Codes
+                                                  </a>
+                                                </h4>
+                                              </div>
+                                              <div id="collapseOne" class="panel-collapse collapse in">
+
+                                          <div class="panel-body" >
+                                             <div class="scroll">
+
+                                            <!-- <div id="adata">   --> 
+
+
+                                             <div  *ngFor="let  record of accordiandata | searchPipe:'code':search; let i = index " >                                             
+                                             
+                                                 <div class="row" id="codes" >  
+                                                                                           
+
+                                                    <div class="selectrow"  class="list-group-item"    style="cursor:pointer;height:40px;"     >
+                                                         
+                                                          <div class="col-xs-2"  > 
+                                                            <input type="checkbox" id="{{record.code}}" name="{{record.code}}" [(ngModel)]="record.checked" value="record.checked" (click)="addSelectedItem(record,i)" >  
+                                                          </div>
+                                                         
+                                                        <div class="col-xs-2"  >                                                         
+                                                          <span id="display"> {{record.code}}</span> &nbsp;&nbsp;&nbsp;
+                                                        </div>
+                                                         <div class="col-xs-8">
+                                                           <span id="display1">  {{record.description}}<br></span>
+                                                         </div>
+                                                    </div>
+
+                                                  </div>
+                                             
+                                              
+                                            </div>
+                                             <!--</div>-->
+                                             </div>                                                                                                  
+
+                                      </div>
+                                      
+                                              </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                  <a class="accordion-toggle1" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="text-decoration:none;color: grey;">
+                                                Additional Earning Codes
+                                                  </a>
+                                                </h4>
+                                              </div>
+                                              <div id="collapseTwo" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <!--<span id="codes1" >
+                                                        Additional earning codes
+                                                    </span>  --> 
+
+
+                                         <div class="scroll">
+                                            <!-- <div id="adata">   --> 
+                                             <div  *ngFor="let  record of accordiandata1 | searchPipe:'code':search; let i = index " >                                             
+                                             
+                                                 <div class="row" id="codes" >  
+                                                                                           
+
+                                                    <div class="selectrow"  class="list-group-item"    style="cursor:pointer;height:40px;"     >
+                                                         
+                                                          <div class="col-xs-2"  > 
+                                                            <input type="checkbox" id="{{record.code}}" name="{{record.code}}" [(ngModel)]="record.checked" value="record.checked" (click)="addSelectedItem(record,i)" >  
+                                                          </div>
+                                                         
+                                                        <div class="col-xs-2"  >                                                         
+                                                          <span id="display"> {{record.code}}</span> &nbsp;&nbsp;&nbsp;
+                                                        </div>
+                                                         <div class="col-xs-8">
+                                                           <span id="display1">  {{record.description}}<br></span>
+                                                         </div>
+                                                    </div>
+
+                                                  </div>
+                                             
+                                              
+                                            </div>
+                                             <!--</div>-->
+                                        </div> 
+
+                                         </div>
+                                              </div>
+                                            </div>
+                                          
+                                          </div>
+                                            
+                                     </div>
+
+                                     
+                                  </div>
+
+
+                                   <div class="col-xs-5">
+                                        <span id="down">Your Earning Codes</span><br>
+
+                                        <div *ngFor="let  record of selectedlist" class="selected" 
+>
+
+                                         
+                                           <p  >{{record.code}} &nbsp;&nbsp;{{record.description}}</p>
+                                        </div>                                         
+                                           
+                                  </div>
+
+                       </div>
+
+
+
+
+
+                </div>
+
+
+              
+
+
+
+</html> 

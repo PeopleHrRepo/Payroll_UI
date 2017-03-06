@@ -1,0 +1,21 @@
+[ {
+  "orgId" : "AHE",
+  "orgDesc" : "SaraPath Diagnostics",
+  "isTriNetLeaveSystemCompany" : "N",
+  "country" : "USA",
+  "isSortApprovalConfigured" : "Y",
+  "hasHistoricData" : "Y",
+  "brand" : "PAS",
+  "vertical" : null,
+  "currentCompany" : true
+}, {
+  "orgId" : "AL9",
+  "orgDesc" : "SaraPathDr",
+  "isTriNetLeaveSystemCompany" : "N",
+  "country" : "USA",
+  "isSortApprovalConfigured" : "N",
+  "hasHistoricData" : "Y",
+  "brand" : "PAS",
+  "vertical" : null,
+  "currentCompany" : false
+} ]

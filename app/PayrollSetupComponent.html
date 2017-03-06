@@ -1,0 +1,62 @@
+ 
+ <div class="tab-pane" id="home-v">
+ <div>
+                  <h2>Payroll Setup</h2>
+                  <p id="requiredField">*denotes required fields</p> 
+                  <form #payrollSetup="ngForm" (change)="save(payrollSetup,userdata,checkDate.value)" >                 
+                  <div class="table2">
+                    <table>
+                        
+                    <tr>
+                      <td class="firstcolumn"><label>Payroll Name:</label></td>
+                     <td><label><input type="text" [(ngModel)]="userdata.payrollName" name="payrollName" #payrollName="ngModel"  >
+                   
+                     </label></td>
+                    </tr>
+                   
+                    <tr>
+                      <td class="firstcolumn"><label>*Pay Group:</label></td>
+                     <td><label><select [(ngModel)]="userdata.payGroup" name="payGroup"  [ngClass]="{errmsg: !payGroup.valid && (payGroup.dirty || payGroup.untouched)}" required #payGroup="ngModel">
+                        <option  default selected > Select a payGroup</option>
+                          
+                         <option >{{listEmp.payGroupDesc}}</option>
+                          
+                          </select> 
+                     
+                      </label></td>
+                    </tr>
+                    <tr>
+                      <td class="firstcolumn"><label> *Payment Method:</label></td>
+                    <td><label><input type="radio" name="paymentMethod" [(ngModel)]="userdata.paymentMethod" #paymentMethod="ngModel" value="preferredMethods"  (click)="enableDatepicker($event,datePicker)">Preferred Methods(Direct Deposits)
+                    
+                    
+                    </label></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><label>
+                          <input type="radio" name="paymentMethod" [(ngModel)]="userdata.paymentMethod" value="liveChecks" #paymentMethod="ngModel" (click)="enableDatepicker($event,datePicker)" >Live Checks
+                           
+                          </label> 
+                    </td>
+                    </tr>
+                    <tr>
+                      
+                      <td class="firstcolumn"><label [ngClass]="{'rColor':datePicker}">*Check Date:</label></td>
+                      <td><span>  <input [(ngModel)]="date" [disabled]="datePicker" ng2-datetime-picker  class="glyphicon glyphicon-calendar" date-format="DD-MM-YYYY" date-only="true" name="checkDate" [ngClass]="{errmsg: !checkDate.valid && (checkDate.dirty || checkDate.touched)}"  [(ngModel)]="userdata.checkDate" #checkDate="ngModel" required/>
+                       </span>
+                       </td>
+                    </tr>
+                    </table>    
+                 </div>
+                  </form>
+
+
+                  <p id="note">Note Only dollar amounts can be imported to a Special Payroll. </p>
+                  </div>
+
+ </div>
+
+
+
+

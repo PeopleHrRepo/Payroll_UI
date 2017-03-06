@@ -1,0 +1,49 @@
+<div id="main" style="background-image: url(app/images/hr3.jpg);background-repeat:no-repeat;
+   background-size:cover; -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;">
+		<div id="sidemenu">
+    </div>
+		
+			<div id="submain">
+				<div id="heading">
+					<img src="app/images/peoplehr.jpg" style="float:left;margin-left:10%;height:auto;">	
+					<h2 id="peoplehead">PeopleHR</h2>
+				</div>
+            <div class="container">  
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                     
+                   <div  class="container">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input [(ngModel)]="user.employeeId" name="employeeId" 
+                                        type="text" class="validate">
+                                    <label for="employeeId">&nbsp;&nbsp;&nbsp;&nbsp;Employee&nbsp;Id</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field">
+                                    <input [(ngModel)]="user.password" name="password" 
+                                        type="password" class="validate">
+                                    <label for="password">&nbsp;&nbsp;&nbsp;Password</label>
+                                </div>
+                            </div>
+
+                           
+                           <div style="margin-left:150px;"> <button (click)="login(user)" 
+                                class="btn waves-effect waves-light" 
+                                type="submit" name="action" >Login</button></div>
+
+                          
+                            
+                        </div>  
+                    </div>
+                </div>
+                </div>
+          </div>
+                 
+		</div>
+
+

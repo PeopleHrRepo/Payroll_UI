@@ -1,0 +1,166 @@
+
+<div id="exTab1" class="container">	
+<!--<ul  class="nav nav-pills">-->
+			<!--<li [routerLinkActive]="['active']"  [routerLinkActiveOptions]="{exact:true}"   (click)="employee()">
+            ALL EMPLOYEES
+			</li>
+			<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" (click)="department()">BY DEPARTMENT
+			</li>
+			<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" (click)="location()">BY LOCATION
+			</li>-->
+
+
+
+  <div class="col-xs-9"> <!-- required for floating -->
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" id="nav"><!-- 'tabs-right' for right tabs -->
+    <li class="active"><a href="#home" data-toggle="tab" (click)="employee()">ALL EMPLOYEES</a></li>
+    <li><a href="#profile" data-toggle="tab" (click)="department()">BY DEPARTMENT</a></li>
+    <li><a href="#messages" data-toggle="tab"  (click)="location()">BY LOCATION</a></li>
+
+
+                         <div class="form-group col-lg-5" id="searhbox" style="margin-left:39px;">
+                                <div class="form-group has-feedback" >
+                                
+                                    <input type="text" class="form-control" id="inputValidation" placeholder="Filter by Name" [(ngModel)]="searchdata"/>
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                            </div>
+
+                           
+   
+  </ul>
+  
+</div>
+<!--<div class="col-xs-9">
+  
+    <div class="tab-content">
+      <div class="tab-pane active" id="home">Home Tab.</div>
+      <div class="tab-pane" id="profile">Profile Tab.</div>
+      <div class="tab-pane" id="messages">Messages Tab.</div>
+     
+    </div>
+</div>-->
+
+
+  		
+                            <!--<div class="form-group col-lg-4">
+                                <div class="form-group has-feedback">
+                                
+                                    <input type="text" class="form-control" id="inputValidation" placeholder="Filter by Name" [(ngModel)]="searchdata"/>
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                            </div>
+-->
+                                
+		      <!--</ul>-->                               
+
+                              <!--  <hr id="line">  
+-->
+			
+  </div>
+
+
+
+
+
+
+  <!--allemployees -->
+            
+<div class="allemployees"  *ngIf="edited">
+  
+  <div class="panel-group" id="accordion1" style="border-top: 1px solid #4285f4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+
+       <input  type="checkbox" name="employee"  [(ngModel)]="checking"   [checked]="active" (change)="changedata(checking)">
+        <a class="accordion-toggle" data-toggle="collapse" id="activeemp" data-parent="#accordion1" href="#collapseOne1" >
+         Active Employees
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne1" class="panel-collapse collapse in">
+      <div class="panel-body" id="panel2">
+      
+           <div class="scroll1">
+        <!--<div *ngFor="let  emp of selectemployees    | searchPipedata:'firstName':searchdata ">
+         <span id="displayemp" >&nbsp;&nbsp;&nbsp;&nbsp;{{emp.firstName}}<br><br></span> 
+                             <input  type="checkbox" name="employee"  [checked]="activedata">                 
+                                
+        </div>
+                -->     
+                 <div id="empdata">    
+                           <div  *ngFor="let  emp of selectemployees  | searchPipedata:'firstName':searchdata" > 
+                             
+                            <span> <input  type="checkbox" name="employee"   [checked]="activedata"> </span>   
+                            <span id="displayemp" >&nbsp;&nbsp;&nbsp;&nbsp;{{emp.firstName}},&nbsp;&nbsp; {{emp.lastName}}<br><br></span>                                    
+                                
+                                                           
+                                     
+
+                         </div>
+                         </div>
+                         </div>
+
+                     </div> 
+                  
+
+
+      
+    </div>
+  </div>  
+</div>  
+</div>
+
+<!--allemployees end -->
+
+
+  
+
+<!--By department  -->
+
+ <div class="department" *ngIf="dept">      
+ 
+
+    <p>This is department </p>
+
+<!-- <div class="panel-group" id="accordion1" style="border-top: 1px solid #4285f4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">    
+        <a class="accordion-toggle" data-toggle="collapse" id="activeemp" data-parent="#accordion1" href="#collapseOne1" >     
+         </a>
+      </h4>
+    </div>
+    <div id="collapseOne1" class="panel-collapse collapse in">
+      <div class="panel-body" id="panel2">      
+             
+                 <div id="empdata">   
+                         <div  *ngFor="let  emp of selectemployees">                              
+                            <span> <input  type="checkbox" name="employee"   [checked]="activedata"> </span>   
+                            <span id="displayemp" >&nbsp;&nbsp;&nbsp;&nbsp;{{emp.firstName}},&nbsp;&nbsp; {{emp.lastName}}<br><br></span>                                    
+                         </div>
+                     </div>
+                       
+            </div>                 
+    </div>
+  </div>  
+</div> -->
+
+
+
+
+     </div>
+
+<!--By department end -->
+
+
+<!--By location  -->
+
+     <div class="location"  *ngIf="loc">
+
+         <p>This is location </p>
+     </div>
+
+<!--By location end -->

@@ -1,0 +1,38 @@
+{
+ "dropDownValues": [{
+  "name": "Ellision Property Management (7NU)",
+  "index": 0
+ }, {
+  "name": "College Square Apartmetns (7PD)",
+  "index": 1
+ }],
+ "paygroup": [{
+  "paygroupName": "BW(Paygroup)",
+  "paygroupStatus": "Completed Paid on01/12/2017",
+  "payName": "Ellision Property Managemen BW",
+  "statusFlag": "true"
+ }, {
+  "paygroupName": "BW(Paygroup)",
+  "paygroupStatus": "Completed Paid on01/26/2017",
+  "payName": "Ellision Property Managemen BW",
+  "statusFlag": "false"
+ }, {
+  "paygroupName": "BW(Paygroup)",
+  "paygroupStatus": "continue Paid on01/30/2017",
+  "payName": "Ellision Property Managemen BW",
+  "statusFlag": "true"
+ },
+ {
+  "paygroupName": "BW(Paygroup0)",
+  "paygroupStatus": "Completed Paid on01/30/2017",
+  "payName": "Ellision Property Managemen BW",
+  "statusFlag": "false"
+ },
+ {
+  "paygroupName": "BW(Paygroup0)",
+  "paygroupStatus": "continue Paid on01/30/2017",
+  "payName": "Ellision Property Managemen BW",
+  "statusFlag": "true"
+ } 
+ ]
+}

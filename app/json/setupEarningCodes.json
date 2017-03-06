@@ -1,0 +1,44 @@
+{
+    "setupEarningCodes":[ {
+        "bcode":"REG",
+        "fullname":"Regular"
+        },
+        {
+        "bcode":"HOL",
+        "fullname":"Holiday"    
+        },
+        {
+        "bcode":"BNS",
+        "fullname":"Discretionary Supplemental BNS"    
+        },
+        {
+        "bcode":"BRV",
+        "fullname":"Bereavement"    
+        },
+        {
+        "bcode":"HOM",
+        "fullname":"Special Holiday Pay"    
+        },
+        {
+        "bcode":"JD",
+        "fullname":" Jury Duty"    
+        },
+        {
+        "bcode":"OVT",
+        "fullname":"Overtime"    
+        },
+        {
+        "bcode":"SCK",
+        "fullname":"Sick"    
+        },
+        {
+        "bcode":"VAC",
+        "fullname":"Vacation"    
+        },
+        {
+        "bcode":"SPB",
+        "fullname":"Discretionary Spot Bonus"    
+        }
+                         
+]
+}

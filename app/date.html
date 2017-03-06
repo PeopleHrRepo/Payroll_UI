@@ -1,0 +1,440 @@
+      
+
+
+  <div>
+   
+<div class="container">
+
+  <div class="modal fade" id="myModal123" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Set Up Earning Codes</h4>
+        </div>
+        <div class="modal-body">
+
+            
+            <div class="row">
+                                  <div class="col-xs-offset-1 col-xs-5">
+                                        <span class="head" id="availableEarnings">Available Earning Codes</span>
+
+                                  </div>
+                                  <div class="col-xs-offset-1 col-xs-5">
+                                        <span class="head" id="yourearningcodes">Your Earning Codes</span>
+                                  </div>
+
+            </div>
+            <div class="row">      
+                                   <div class="col-xs-5">     
+                                            
+                                         <div class="inner-addon right-addon">
+                                           <i class="glyphicon glyphicon-search" id="searchIcon"></i>
+                              <input id="inputBox"  type="text" class="form-control" placeholder="Find Code"  [(ngModel)]="search"  />
+                                        </div>
+
+
+
+
+                                        <div class="section1">
+                                           <div class="panel-group" >
+                                             <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                <h4 class="panel-title">
+<!--                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">-->
+                                                    Code<span style="margin-left:100px;">Discription</span>
+<!--                                                  </a>-->
+                                                </h4>
+                                              </div>
+                                             
+
+                                          <div class="panel-body" >
+                                             <div id="scrollbarFirst">
+
+                                             <div id="adata">    
+                                               
+                                                 <div  *ngFor="let record of availablecodes | searchPipe:'code':search  "  >
+                                              
+                                                <div class="row" id="codes"   >
+                                                      <div class="col-xs-2" >
+                                                       <span id="display" >{{record.code}}</span>
+                                                      </div>
+                                                      <div class="col-xs-8">
+                                                          <span id="display1" >  {{record.description}}<br></span>
+                                                      </div>
+
+                                               </div>
+                                              
+                                            </div>
+                                             </div>
+                                              </div> 
+                                               </div>
+                      
+                                      </div>
+                                      
+                                              </div>
+                                            </div>
+
+                </div>
+                <span style="border:1px solid silver;margin-left:6%;margin-top:5%"></span> 
+                <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6  col-xs-offset-6 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                            <button class="glyphicon glyphicon-sort-by-alphabet" id="atoz" [ngClass]="appserver" style="padding:3px" (click)="ascendingorder()"></button>
+                            <button style="padding:3px;margin-left:5px;"  id="ztoa"  class="glyphicon glyphicon-sort-by-alphabet-alt" (click)="descendingorder()"></button>
+                           
+                                     <div class="section1" id="panel2">
+                                           <div class="panel-group" >
+                                             <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                <h4 class="panel-title">
+<!--                                                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">-->
+                                                   <span style="margin-left:20px;"> Codes</span><span style="margin-left:75px;">Fullnames</span>
+<!--                                                  </a>-->
+                                                </h4>
+                                              </div>
+                                          <div class="panel-body" >
+                                             <div id="scrollbarSecond">
+
+                                             <div id="adata">    
+                                                  <div>
+
+                                           <div class="first" >
+                                              <div class="first" *ngIf="sort1">             
+                                             <div  *ngFor="let earningcode of earning">                     
+
+                                                       
+                                                      <div class="col-xs-10" style="padding:3px;">
+                                                         <div id="dispYourCodes" >
+                                                            <span style="margin-left:20px;"> {{earningcode.code}}</span><span style="margin-left:75px;">{{earningcode.description}}</span>
+                                                           </div>
+                                                          
+                                                      </div>
+                                              </div>
+                                           </div>
+                                                      </div>
+                                                      
+                                        <div class="second">      
+                                           <div class="second" *ngIf="sorting">      
+
+                                         
+                                            <div  *ngFor="let earningcode of earning | ascending:'bcode'"> 
+                                           
+                                               
+                                                      <div class="col-xs-10" style="padding:3px;">
+                                                         <div id="dispYourCodes" >
+                                                            <span style="margin-left:20px;"> {{earningcode.code}}</span><span style="margin-left:75px;">{{earningcode.description}}</span>
+                                                           </div>
+                                                          
+                                                      </div>
+                                              </div>
+                                            </div>
+
+                                            
+                                             </div>
+                                                      <div class="third" *ngIf="sortingdesc">      
+
+                                          <div  *ngFor="let earningcode of earning | descending:'bcode'">                      
+
+                                                <!--<div class="row" id="codes">-->
+                                                      <div class="col-xs-10" style="padding:3px;">
+                                                         <div id="dispYourCodes" >
+                                                            <span style="margin-left:20px;"> {{earningcode.code}}</span><span style="margin-left:75px;">{{earningcode.description}}</span>
+                                                           </div>
+                                                          
+                                                      </div>
+                                              </div>
+                                            </div>
+                                                 <div >
+                                             <div  >
+                                                <!--<div class="row" id="codes">-->
+                                                      <div class="col-xs-10" style="padding:3px;">
+                                                         <div id="dispYourCodes">
+                                                            <!--<div id="dispYourCodes" *ngIf="toggleData1">-->
+                                                            <span *ngFor="let earningcode of code " style="margin-left:20px;"> {{earningcode}}</span>
+                                                            <span *ngFor="let earningcode of description " style="margin-left:75px;">{{earningcode}}</span>
+                                                           </div>
+                                                          <!--</div>  -->
+                                                          
+                                                      </div>
+                                              </div>
+                                          
+                                            <!--</div> -->
+                                             </div>
+                                             </div>
+                                              </div>
+                                              </div>
+                                              
+                                           </div>
+                                        </div>
+                
+                                         </div></div>
+                </span>
+                
+            </div>
+      </div>
+      
+    </div>
+  </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+ 
+<div class="model1" data-dismiss="modal">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" #myModal   role="dialog">
+    <div class="modal-dialog">
+    <div >
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" (click)="discardChanges()" style="color:white;">&times;</button>
+          <h4 class="modal-title">Create Special Payroll</h4>
+        </div>
+        <div class="modal-body">
+
+        
+<div class="row">
+   
+        
+        <div class="col-xs-3">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tabs-left vertical-text">
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a href="#"  [routerLink]="['payroll']"  ><span class="numberCircle">1</span>Payroll Setup</a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a href="#" [routerLink]="['earningCode']" ><span class="numberCircle">2</span>Select Earning Codes</a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a href="#"  [routerLink]="['selectEmployees']"><span class="numberCircle">3</span>Select Employees</a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a href="#"  [routerLink]="['deliveryOptions']"><span class="numberCircle">4</span>Delivery Options</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-9">
+           
+            <div class="tab-content">
+                         
+              <router-outlet></router-outlet>
+            
+        </div>
+        <div class="clearfix"></div>
+</div>
+
+
+  
+
+
+
+
+
+
+        <div class="clearfix"></div>
+    </div>
+        </div>
+     <div class="modal-footer">
+         <button type="button" class="btn btn-default" id="previousButton" *ngIf="formPrevious" (click)="prevButton()"><a href="#profile-v" data-toggle="tab" style="color:white;text-decoration: none;">Previous</a></button>
+         <button type="button" class="btn btn-default" id="nextButton" *ngIf="formNext" [disabled]="nextButtonDisable" (click)="nextButton()"><a href="#profile-v" data-toggle="tab" style="color:white;text-decoration: none;">Next</a></button>
+         <button type="button" class="btn btn-default" id="doneButton" data-dismiss="modal" [disabled]="doneButtonDisable" (click)="senddata(userdata)">Done</button>
+          <button type="button" class="btn btn-default" class="closeButton"  data-toggle="modal"  data-target="#myModal2" >Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+     <div class="model2">
+          <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" >&times;</button>
+          <h4 class="modal-title">Confirmation</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are sure you want to discard all changes?</p>
+        </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-default" style="background-color:rgb(188, 85, 16);color:white;" (click)=discardChanges() onClick="closeAll()">Yes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" data-backdrop="static" style="background-color:grey;color:white;" (click)="closeParent()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+          </div>
+
+
+
+
+
+
+
+<div>
+  <div id="heading">
+
+
+ <span style="font-size:25px;color:steelblue;  font-weight: bold;">People HR</span>
+  
+  
+  <span class="verticalLine" style="height: 22px;"></span>
+  <span><p id="payrollName">{{empId}}</p></span>
+<span><p id="name">Welcome,{{empName}}</p></span>
+</div>
+</div>
+<div id="mainContent">
+  <button id="help">Help</button>
+  <div id="dashboard">
+  <span ><h1>Payroll Dashboard</h1></span><a id="schedule">Payroll Schedule</a>
+  <span id="payrollDate">{{getPayrollMonth}} {{getPayrollDay}}, {{getPayrollYear}}</span>
+  
+  </div>
+  <div>
+    <select id="select" #selectId (change)="selectEmp(selectId.value)">
+      <option *ngFor="let x of list; let i=index" [value]="x.orgDesc" >{{x.orgDesc}}</option>
+    </select>
+     </div>
+     <div>
+       <span  id="payrollDue">
+      
+    <span>1 Payroll(s) due by <br><p style="margin-left:20px;"> 10.05am Monday,February 6</p></span></span>
+
+    <span>
+      <button id="setupButton" data-toggle="modal" data-target="#myModal123">Set up Earning Code </button>
+    </span>
+    <span>
+
+
+    </span>
+    <span>
+      
+<span class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" id="specialPayroll" type="button" data-toggle="dropdown">+Add Special Payroll
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li ><a href="#" data-toggle="modal" data-target="#myModal"  >Create a New</a></li>
+  
+    <li><a href="#">Import File</a></li>
+  </ul>
+</span>
+
+    </span>
+     </div>
+
+
+
+   <div class="success" [hidden]="successMsg"><p>Special Payroll Created Still Working On that</p>
+   <button type="button" class="close" (click)="closeMsg()">&times;</button>
+ </div>
+ 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="margin-top: 25px;">
+  <span  class="one"  
+  [ngClass]="i==currentMonthIndex ? 'monColor' : 'rColor'" 
+  *ngFor="let x of months; let i=index;"  (click)="getMonth(x,year)">
+  <p [ngClass]="{'myStyle':i==clickedMonth,'rColor':monthRow==true} ">
+    {{x}}</p></span>
+  
+  <span id="sp1">SP</span>
+  <span id="sp2">Special Payroll</span>
+  <span id="year"><span (click)="dec(year,x)" id="leftArrow">&lt;</span><span id="yearNumber">{{year}}</span><span (click)="inc(year,x)" id="rightArrow">&gt;</span>
+  </span>
+    </div>
+    <hr>
+  <div class="table1 table-responsive ">
+  <table>
+ <tr id="row1" >      
+      <td *ngFor="let x of days" class="header">{{x}}</td> &nbsp;
+      <td *ngFor="let x of days" class="header">{{x}}</td> &nbsp;
+      <td *ngFor="let x of days" class="header">{{x}}</td> &nbsp;
+      <td *ngFor="let x of days" class="header">{{x}}</td> &nbsp;
+      <td *ngFor="let x of days" class="header">{{x}}</td> &nbsp;
+     <!-- <td *ngFor="let x of days" class="header">{{x}}</td><td></td>-->
+    </tr>
+  <tr *ngIf="defaultRow" id="row2">
+      <td *ngFor="let x1 of splits[0]; let i=index"  class="body" 
+      [ngClass]="{
+        'dayColor':(x1==currentDate) && (x1<24),'disableDate':prevArray[i]!=x1[i] }" 
+      >{{x1}} <button *ngIf="x1 == selectedDate && specialButton" #spcreated  id="spcreate">1SP</button></td>  &nbsp;
+      <td *ngFor="let x2 of splits[1]; let i=index"  class="body" 
+      [ngClass]="{'dayColor':x2==currentDate
+
+      }">{{x2}}<button *ngIf="x2 == selectedDate && specialButton" #spcreated  id="spcreate">1SP</button></td> &nbsp;
+      <td *ngFor="let x3 of splits[2]; let i=index"  class="body" 
+      [ngClass]="{'dayColor':x3==currentDate
+      }">{{x3}}<button #spcreated *ngIf="x3 == selectedDate && specialButton"  id="spcreate">1SP</button></td> &nbsp;
+      <td *ngFor="let x4 of splits[3]; let i=index"  class="body" 
+      [ngClass]="{'dayColor':x4==currentDate
+      }">{{x4}}<button *ngIf="x4 == selectedDate && specialButton" #spcreated  id="spcreate">1SP</button></td> &nbsp;
+      <td *ngFor="let x5 of splits[4]; let i=index"  class="body" 
+      [ngClass]="{'dayColor':(x5==currentDate) && (x5>7),'disableDate':x5==1 || x5==2 || x5==3 || x5==4 || x5==5 || x5==6 || x5==7}">{{x5}}<button *ngIf="x5 == selectedDate && specialButton" #spcreated  id="spcreate">1SP</button></td> &nbsp;
+      <!--<td *ngFor="let x6 of splits[5]; let i=index"  class="body" 
+      [ngClass]="{'disableDate':nextArray[i]!=x6[i]}">{{x6}}</td><td></td>-->
+    </tr>
+    <tr *ngIf="monthRow" id="row3">
+      <td  *ngFor="let x1 of splits1[0]; let i=index"  class="body"  [ngClass]="{'dayColor':(x1==currentFlag) && (x1<24),'disableDate':prevArrayClick[i]!=x1[i]}">{{x1}}</td> &nbsp;
+      <td  *ngFor="let x2 of splits1[1]"  class="body" [ngClass]="{'dayColor':x2==currentFlag}" >{{x2}}</td> &nbsp;
+      <td  *ngFor="let x3 of splits1[2]"  class="body" [ngClass]="{'dayColor':x3==currentFlag}" >{{x3}}</td> &nbsp;
+      <td  *ngFor="let x4 of splits1[3]"  class="body" [ngClass]="{'dayColor':x4==currentFlag}">{{x4}}</td> &nbsp;
+      <td  *ngFor="let x5 of splits1[4]"  class="body" [ngClass]="{'dayColor':(x5==currentFlag) && (x5>7),'disableDate':x5==1 || x5==2 || x5==3 || x5==4 || x5==5 || x5==6 || x5==7}">{{x5}}</td> &nbsp;
+      <!--<td  *ngFor="let x6 of splits1[5]"  class="body">{{x6}}</td><td></td>-->
+     
+    </tr>
+      
+   </table>
+
+    
+  </div>
+
+<div class="container">
+  <div class="row" id="payGroup">
+    <div class="col-md-4" *ngFor="let data of payGroupData; let i=index"
+    [ngClass]="data.status=='I' ? 'color' : 'color1' ">
+      <p class="payname" >{{data.payGroup}}(PayGroup)</p><br>
+      <p class="desc">{{data.payrollStatusDesc}}</p><span class="desc">{{data.payEndDate}}</span><br>
+      <p class="desc">{{data.payGroupDesc}}</p><br>
+      
+    </div>
+  </div>
+
+
+
+</div>
+  </div>
+
+
+

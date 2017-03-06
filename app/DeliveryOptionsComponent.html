@@ -1,0 +1,102 @@
+<div class="form-group">    
+  <div id="deliver">    
+      <div class="col-sm-offset-2 col-xs-10">
+        <span>* Delivery Options:</span>&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="delivery-type" (change)="onDeliveryTypeRadioChange(true)" (change)="showDoneButton(true)"
+             value="current"> Via current shipping methods on file
+      </div>
+      <div class="col-xs-offset-4 col-xs-8">
+      <input type="radio" name="delivery-type" (change)="onDeliveryTypeRadioChange(false)"   (change)="showDoneButton(false)"
+          value="oneloc"> To one location
+    </div>
+  </div>
+  <div id="formdata"  [ngClass]="{'dataColor':formColor}" >
+   
+<form id="deliveryForm"  #f="ngForm" novalidate (change)="save(f,delivery)" 
+  class="form-horizontal disable-whole-form" >
+    <div class="disable-whole-form__cover" [hidden]="!disableDeliveryForm"></div>
+   
+   <div id="hr2"> <hr> </div>
+   <div id="reqfields"><sup id="requiredField">*denotes required fields</sup> </div>   
+  <div class="form-group marginRow" id="deliveryRadio">
+    <label class="control-label col-xs-3" for="deltype"><span>*</span>Delivery Type:</label>
+    
+    <div class="col-xs-3"> 
+        <input type="radio" name="deliveryType" #deliveryType="ngModel" [(ngModel)]="delivery.deliveryType" 
+        value="fedex" [ngClass]="{errmsg: !deliveryType.valid}" required> Fedex
+    </div>
+    <div class="col-xs-6" style="margin-top: -10px;"> 
+        <input type="radio" name="deliveryType" #deliveryType="ngModel" [(ngModel)]="delivery.deliveryType" value="regular"
+          [ngClass]="{errmsg: !deliveryType.valid }" required > Regular Mail
+    </div>
+  
+  </div>
+    <div class="form-group marginRow">
+      <label class="control-label col-xs-3 " for="attention" >Attention:</label>
+      <div class="col-sm-9">
+        <input type="text" #attention="ngModel" class="form-control input-sm" id="attention" 
+            name="attention" [(ngModel)]="delivery.attention">
+      </div>
+   </div>
+   <div class="form-group marginRow" >
+    <label class="control-label col-xs-3" for="addr1"><span>*</span>Address1:</label>
+    <div class="col-xs-9"> 
+      <input type="text" class="form-control input-sm"  id="addr1"  name="addr1" #addr1="ngModel"
+       [(ngModel)]="delivery.address1" [ngClass]="{errmsg: !addr1.valid && (addr1.dirty || addr1.touched)}" required>
+    </div>
+  </div>
+  <div class="form-group marginRow">
+    <label class="control-label col-xs-3" for="addr2">Address2:</label>
+    <div class="col-xs-9"> 
+      <input type="text" class="form-control input-sm" id="addr2" name="addr2" [(ngModel)]="delivery.address2">
+    </div>
+  </div>
+<div class="form-group marginRow">
+    <label class="control-label col-xs-3" for="country"><span>*</span>Country:</label>
+    <div class="col-xs-9"> 
+      <select class="form-control input-sm" name="country" #country="ngModel" id="country"   (change)="selectStates($event.target.value)"
+          [(ngModel)]="delivery.country" [ngClass]="{errmsg: !country.valid && (country.dirty || country.touched)}" required>
+          <option></option>
+       <option *ngFor="let x of countries" [value]="x.country">{{x.country}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group marginRow">
+    <label class="control-label col-xs-3" for="city"><span>*</span>City:</label>
+    <div class="col-xs-9"> 
+      <input type="text" class="form-control input-sm" id="city" name="city" #city="ngModel"
+      [(ngModel)]="delivery.city" [ngClass]="{errmsg: !city.valid && (city.dirty || city.touched)}" required>
+    </div>
+  </div>
+<div class="form-group marginRow">
+    <label class="control-label col-xs-3" for="state"><span>*</span>State/Province:</label>
+    <div class="col-xs-9"> 
+      <select name="state" class="form-control input-sm" id="state" #state="ngModel"
+        [(ngModel)]="delivery.state" [ngClass]="{errmsg: !state.valid && (state.dirty || state.touched)}" required>
+        <option></option>
+        <option *ngFor="let state of filteredStates" [value]="state.descr">{{state.descr}}</option>
+      </select>
+    </div>
+  </div>
+<div class="form-group marginRow">
+    <label class="control-label col-xs-3" for="zip"><span>*</span>Zip Code:</label>
+    <div class="col-xs-9"> 
+      <input type="number" class="form-control input-sm" id="zip" name="zip" #zip="ngModel" placholder="99999-9999"
+      [(ngModel)]="delivery.zip" [ngClass]="{errmsg: !zip.valid && (zip.dirty || zip.touched)}" required>
+    </div>
+  </div>
+<div class="form-group input-sm marginRow">
+    <label class="control-label col-xs-3" for="instr">Special Delivery<br/>Instructions:<br/>
+      <span>({{charsLeft}} Characters left)</span>
+    </label>
+    <div class="col-xs-9"> 
+      <textarea name="instr" [(ngModel)]="instr" ng-trim="false" (keydown)="changed()" rows="4" cols="67"></textarea>
+   <a href="#">
+    <span class="glyphicon glyphicon-question-sign"></span>
+    </a>
+    </div>
+  </div>
+ 
+  </form>
+
+  </div>

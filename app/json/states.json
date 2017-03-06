@@ -1,0 +1,21 @@
+[
+    { "value": "AP", "display": "Andhra Pradesh", "countrycode":1},
+    { "value": "TL", "display": "Telangana", "countrycode":1},
+    { "value": "MP", "display": "Madhya Pradesh", "countrycode":1},
+    { "value": "UP", "display": "Uttar Pradesh", "countrycode":1},
+    { "value": "JK", "display": "Jammu Kashmir", "countrycode":1},
+    { "value": "TN", "display": "Tamil Nadu", "countrycode":1},
+    
+    { "value": "CA", "display": "California", "countrycode":2},
+    { "value": "NJ", "display": "New Jersy","countrycode":2},
+    { "value": "NY", "display": "New York","countrycode":2},
+    { "value": "BO", "display": "Boston","countrycode":2},
+    { "value": "PA", "display": "Pennsylvania","countrycode":2},
+    { "value": "CO", "display": "Colarado","countrycode":2},
+    { "value": "AZ", "display": "Arizona","countrycode":2},
+    { "value": "CA", "display": "Canada", "countrycode":3},
+
+    { "value": "QL", "display": "QueensLand", "countrycode":5},
+    { "value": "SA", "display": "South Australia", "countrycode":5},
+    { "value": "TS", "display": "Tasmania", "countrycode":5}
+]

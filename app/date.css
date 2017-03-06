@@ -1,0 +1,871 @@
+
+ #spcreate{
+    background-color: limegreen;
+    border:none;
+    color:white;
+    font-size: 15px;
+    padding:1px;
+    position: absolute;
+    z-index: 1000;
+    top : 320px;
+  }
+
+  .success {
+    left:30%;
+    top:5%;
+    position: fixed;
+    width:350px;
+    height:60px;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    padding:10px;
+    text-align: center; 
+}
+.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+option[default] {
+    display: none;
+}
+#inputBox {
+    width:65%;   
+}
+#searchIcon {
+    width:42%;   
+}
+
+
+#dispYourCodes {
+   padding:12px 5px;
+   border:1px solid silver;
+   background-color:silver;
+}
+
+#myModal123 .modal-content {
+    width: 1172px;
+    height: 610px;
+    margin-left: -290px;
+    background-color: #dddddd;
+     }
+#myModal123  .modal-header{
+    background-color: #4285f4;
+    color:white;
+}
+
+#myModal123 .form-control {
+    margin-bottom: 6px;
+    margin-top: -15px;
+    height: 27px
+}
+#myModal123  .modal-body{
+    background-color: white;
+    width: 1155px;
+    margin: 5px 10px 5px 7px;
+    height: 524px;
+}
+#myModal123 #searchIcon {
+    position: relative;
+    top: 12px;
+    left: 270px;
+}
+#availableEarnings{
+    margin-left: -94px;
+}
+#yourearningcodes{
+    margin-left: -94px;
+}
+#atoz{
+    top:-21px;
+}
+#ztoa{
+    top:-21px;
+}
+#panel2{
+    margin-top: -10px;
+}
+ .one{ 
+    font-size: 15px;
+    display:inline;
+    margin-left:20px;
+    color:grey;
+    padding-left: 5px;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+.table1 table{
+    margin-left:20px;
+    color:black;
+    margin-top: 0px;
+  }
+ 
+ .table1 td{
+    width:35px;
+   text-align: center;
+   
+ }
+ #year{
+   float:right;
+   margin-right: 21px;
+ }
+ hr{
+    margin-right: 24px;
+   margin-bottom: 5px;
+   margin-top: 6px;
+   margin-left: 20px;
+ }
+ #leftArrow, #rightArrow{
+   color:skyblue;
+   font-size: 18px;
+   padding: 3px;
+   font-weight:bolder;
+     cursor: pointer;    
+ }
+ #yearNumber{
+   color:black;
+   font-family: sans-serif;
+   font-size: 19px;
+ }
+ #row1{
+   line-height:16px;
+
+ }
+  .header{
+    color:white;
+    font-size: 11px;
+   border:1px solid #4285f4;
+   border-collapse: collapse;
+    background-color:#4285f4;
+  }
+  .body{
+    /*border:1px solid #4285f4;*/
+    padding:3px;
+    font-size: 15px;
+  }
+
+  #row1,#row2{
+    padding:10px;
+  }
+  #row2 td:first-child{
+    border-left: 1px solid #4285f4;
+    
+  }
+  #row3 td:first-child{
+    border-left:1px solid #4285f4;
+  }
+  td:nth-child(8),td:nth-child(15),td:nth-child(22),td:nth-child(29){
+    border-left:solid 1px #4285f4;
+  }
+  #row2 td{
+    border-bottom:1px solid #4285f4;
+  }
+   #row3 td{
+    border-bottom:1px solid #4285f4;
+  }
+  td:nth-child(7),td:nth-child(14),td:nth-child(21), td:nth-child(28),td:nth-child(35){
+    border-right:1px solid #4285f4;
+  }
+  
+  #sp1{
+    border:1px solid limegreen;
+    background-color: limegreen;
+    color:white;
+    font-size: 15px;
+    padding:1px;
+    margin-left:350px;
+  }
+  #sp2{
+
+   font-size: 12px;
+  }
+  h1{
+    margin-top: 30px;
+     margin-left:20px;
+     color:#4285f4;
+  }
+  #payrollDate{
+    margin-left: 20px;
+    color:grey;
+    font-size: 18px;
+  }
+  p{
+    display: inline;
+    cursor: pointer;
+   
+  }
+ 
+ .verticalLine {
+  border-left: 1px solid gray;
+ position:absolute;
+
+    margin-top: 6px;
+    margin-left: 5px;
+   
+}
+.errmsg{
+    
+    border:1px solid red;
+}
+#payrollName{
+   margin-top: 21px;
+  font-size: 16px;
+  margin-left: 15px;
+ 
+}
+#name{
+
+  top: 6.5%;
+  left: 82.5%;
+  font-size: 16px;
+  position:fixed;
+}
+#mainContent{
+  
+
+  background-color: white;
+  height:560px;
+  width:1275px;
+ 
+  margin-left: 40px;
+   margin-right: 40px;
+   margin-top: 8px;
+
+   position: fixed;
+}
+
+#heading{
+  margin-top:30px;
+  margin-left: 40px;
+   margin-right: 40px;
+}
+
+#dashboard{
+  margin-top:20px;
+}
+
+
+    #help{
+    background: black;
+    color: white;
+    margin-left: 96.5%;
+    height: 23px;
+    width: 45px;
+    text-align: center;
+}
+
+        #schedule{
+          float:right;
+          margin-top: -40px;
+          margin-right: 20px;
+          color: orange;
+          font-weight: bold;
+          font-size: inherit;
+          cursor: pointer;
+        }
+        #select{
+          margin-left: 20px;
+          margin-top: 20px;
+          color:black;
+        }
+        .dayColor{
+          background-color:#4285f4; 
+          color:white;
+        }
+        #payrollDue{
+          margin-left:20px;
+          color:grey;
+        }
+        #setupButton{
+   
+          margin-left:56%;
+          color:white;
+          background-color: dimgrey;
+        }
+        #specialPayroll{
+           color:white;
+           height:27px;
+           line-height: 1;
+           margin-left:13px;
+           background-color: darkorange;
+        }
+        .dropdown-menu{
+              min-width: 125px;
+          margin:5% 0% 0% 31%;
+          width:20px;
+          height:auto;
+          font-size: 12px;
+        }
+        .btn {
+          border-radius: 0;
+        }
+        .monColor{
+          color:#4285f4;
+          
+        }
+        .rColor{
+          color:#dddddd;
+
+          
+        }
+        .closing{
+          display: none;
+          background-color:rgba(0,0,0,0);
+            
+
+        }
+      .myStyle{
+         color:#4285f4;
+          border-bottom:6px solid #4285f4;
+      }
+
+
+.disableDate{
+      color:#dddddd;
+      }
+      .container{
+        width:100%;
+        margin-left:17px;
+        height: auto;
+      }
+      .color1{
+      background: lightgrey;
+      width:30%;
+      height:10%;
+      margin-top:4px; 
+      margin-left:3px;
+      outline:solid 1px lightgrey;
+      border-right:solid 8px gray;
+    }
+    .color{
+      background: lightskyblue;
+      width:auto;
+      height:10%;
+      margin-top:4px; 
+      margin-left:3px;
+      outline:solid 1px steelblue;
+      border-right:solid 8px steelblue;
+    }
+    .payname{
+      font-weight: bolder;
+    }
+    .desc{
+      color:grey;
+    }
+    .disableDate1{
+      color:#dddddd;
+    }
+    normalDays{
+      color:black;
+      font-weight: bolder;
+    
+    }
+
+
+
+     .model1 .modal-content {
+    width: 1172px;
+    height: 600px;
+    margin-left: -290px;
+    background-color: #dddddd;
+     }
+    .model1 .modal-header{
+       background-color: #4285f4;
+       color:white;
+     }
+
+
+
+     
+
+  .model1 .modal-body{
+    background-color: white;
+    width: 1155px;
+    margin: 5px 10px 5px 7px;
+    height: 466px;
+}
+
+.model2 .modal-dialog {
+    width: 430px;
+}
+ .model2 .modal-content {
+  width: 430px;
+  margin-left:115px;
+   margin-top: 250px;
+    background-color: #dddddd;
+     }
+
+
+
+
+.model2 .modal-header{
+       background-color: #4285f4;
+       color:white;
+           padding: 3px;
+     }
+     .model2 .modal-body{
+      background-color: white;
+    margin: 2px 5px -5px 4px;
+    height: 70px;
+}
+.model2 .modal-title{
+      font-size: 15px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.nav li{
+  display: block;
+}
+
+
+
+
+
+.tabs-left{
+  border-bottom: none;
+  padding-top: 2px;
+}
+
+
+.tabs-left {
+  border-right: 1px solid #4285f4;
+    height: 438px;
+    background-color: #4285f4;
+}
+
+
+
+.tabs-left {
+  border-bottom: none;
+  padding-top: 0px;
+}
+.tabs-left {
+  border-right: 1px solid #4285f4;
+}
+
+.tabs-left>li{
+  float: none;
+  margin-bottom: 0px;
+}
+.tabs-left>li {
+  margin-right: -2px;
+}
+.tabs-right>li {
+  margin-left: -1px;
+}
+.tabs-left>li>a {
+  color:white;
+  background-color:transparent;
+  margin-right: 1px;
+  font-weight: bold;
+
+  display:block;
+}
+
+.tabs-left>li>a:hover{
+background-color : rgb(195, 225, 247);
+}
+.tabs-left>li.active>a{
+  color:#4285f4;
+  font-weight: bold;
+  background-color:  rgb(195, 225, 247);
+ 
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+    background:white;
+    border: 2px solid black;
+    color:black;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
+
+h2 {
+    color: #4285f4;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#requiredField {
+    margin-top: -50px;
+    color: #4285f4;
+    margin-right: 188px;
+    font-size: 12px;
+    float: right;
+}
+.firstcolumn{
+ 
+ text-align: right
+  
+  
+}
+label{
+  font-weight: 200;
+
+}
+.table2 table{
+ 
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 14px;
+    color:black;
+}
+.table2 td{
+      padding-bottom: 10px;
+    padding-left: 10px;
+}
+.numberCircle {
+  margin-right: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    background: #fff;
+    border: 1px solid white;
+    color: black;
+    text-align: center;
+    font: 12px Arial, sans-serif;
+    display: inline-block;
+}
+ 
+ #nextButton {
+    color:white;
+      height: 35px;
+    background-color:grey;
+    }
+#doneButton{
+  color:white;
+    height: 35px;
+   background-color: grey;
+}
+#previousButton{
+ color:white;
+    height: 35px;
+   background-color: grey;
+   float: left;
+}
+
+.closeButton{
+  color:white;
+  height: 35px;
+    background-color: grey;
+}
+.model2 .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+}
+
+#note{
+  position: fixed;
+  color:firebrick;
+  margin-top:175px;
+  font-size:11px;
+
+}
+
+ .ng2-datetime-picker > .month {
+  text-align: center;
+  line-height: 22px;
+  padding: 10px;
+  background:cornflowerblue;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-danger {
+  padding: 0px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.footer{
+   margin-top: 216px;
+    float: left;
+    margin-left: 673px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px)  {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#mainContent{
+  background-color: white;
+  height:560px;
+  width:1000px;
+   margin-left: 10px;
+   margin-right: 30px;
+   margin-top: 20px;
+   position: fixed;
+}
+
+#setupButton{
+          margin-left:45%;
+          color:white;
+          background-color: dimgrey;
+        }
+        #specialPayroll{
+           color:white;
+           height:24px;
+           margin-left:13px;
+           background-color: darkorange;
+        }
+
+   #sp1{
+    border:1px solid limegreen;
+    background-color: limegreen;
+    color:white;
+    font-size: 15px;
+    padding:1px;
+    margin-left:5%;
+  }
+  #sp2{
+   font-size: 12px;
+  }
+  #heading{
+  margin-top:30px;
+  margin-left:1%;
+  margin-right: 40px;
+}
+
+#payrollName{
+  margin-top: 21px;
+  font-size: 16px;
+  margin-left: 15px;
+ 
+}
+#name{
+  font-size: 16px;
+  left:79%;
+ 
+  top:6.5%;
+}
+ .model1 .modal-content {
+    width: 900px;
+    height: 600px;
+    margin-left: -150px;
+    background-color: #dddddd;
+     }
+    .model1 .modal-header{
+       background-color: #4285f4;
+       color:white;
+     }
+
+
+
+
+     
+
+  .model1 .modal-body{
+    background-color: white;
+    width: 870px;
+    margin: 5px 10px 5px 7px;
+    height: 465px;
+}
+    
+    
+    
+   #myModal123 .modal-content {
+    width: 900px;
+    height: 600px;
+    margin-left: -150px;
+    background-color: #dddddd;
+     }
+    #myModal123 .modal-header{
+       background-color: #4285f4;
+       color:white;
+     }
+
+
+#availableEarnings {
+    margin-left: -71px;
+}
+#yourearningcodes {
+    margin-left: -74px;
+}
+    
+    #myModal123 #searchIcon {
+    position: relative;
+    top: 12px;
+    left: 195px;
+}
+     
+
+  #myModal123 .modal-body{
+    background-color: white;
+    width: 870px;
+    margin: 5px 10px 5px 7px;
+    height: 465px;
+}
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+.footer{
+   margin-top:10%;
+    float: left;
+    margin-left: 70%;
+    position: absolute;
+}
+
+#requiredField {
+    margin-top: -50px;
+    color: #4285f4;
+    margin-right: 100px;
+    font-size: 12px;
+    float: right;
+}
+.col-xs-3 {
+    width: 27%;
+}
+.col-xs-9 {
+    width: 73%;
+}
+
+
+}
+  #help{
+    background: black;
+    color: white;
+    margin-left: 96.5%;
+    height: 23px;
+    width: 45px;
+    text-align: center;
+}
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px){
+
+#mainContent {
+    background-color: white;
+    height: 560px;
+    width: 1190px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 8px;
+    position: fixed;
+}
+
+#setupButton {
+    margin-left: 53%;
+    color: white;
+    background-color: dimgrey;
+}
+
+#sp1{
+    border: 1px solid limegreen;
+    background-color: limegreen;
+    color: white;
+    font-size: 15px;
+    padding: 1px;
+    margin-left: 250px;
+}
+
+.table1 td{
+    width: 32px;
+    text-align: center;
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 1370px) and (max-width: 1600px){
+#name {
+    top: 5.5%;
+    left: 85%;
+    font-size: 16px;
+    position: fixed;
+}
+
+#mainContent {
+    background-color: white;
+    height: 694px;
+    width: 1525px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 8px;
+    position: fixed;
+}
+
+#setupButton  {
+    margin-left: 63%;
+    color: white;
+    background-color: dimgrey;
+}
+
+#sp1  {
+    border: 1px solid limegreen;
+    background-color: limegreen;
+    color: white;
+    font-size: 15px;
+    padding: 1px;
+    margin-left: 568px;
+}
+
+
+.table1 td {
+    width: 42px;
+    text-align: center;
+}
+
+}
+
+#scrollbarFirst{max-height: 238px;overflow-y: scroll;  overflow-x: hidden;}
+#scrollbarSecond {max-height: 250px;overflow-y: scroll;  overflow-x: hidden;}
+
